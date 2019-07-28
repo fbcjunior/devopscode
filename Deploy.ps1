@@ -127,6 +127,20 @@ if ($install_node) {
 $ScriptDir = Split-Path $script:MyInvocation.MyCommand.Path
 
 cd $ScriptDir
+
+if ($install_NPM) {
+    
+    #Serverless install
+    write-host "`n----------------"
+    write-host "NPM Installation "
+    write-host "----------------`n"
+
+    # Deploying to AWS
+    write-host "`[NPM] Installing..."
+    npm i
+
+}
+
 if ($install_serverless) {
 
     #Serverless install
@@ -148,18 +162,7 @@ if ($install_serverless) {
 }
 
 
-if ($install_NPM) {
-    
-    #Serverless install
-    write-host "`n----------------"
-    write-host "NPM Installation "
-    write-host "----------------`n"
 
-    # Deploying to AWS
-    write-host "`[NPM] Installing..."
-    npm i
-
-}
 
 if ($install_DynamoDB) {
     
