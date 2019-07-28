@@ -29,13 +29,13 @@ GET requests include all required data in the URL.
 2) Update the Deploy.ps1 script and add your AWS credentials
 3) Run: Deploy.ps1 (run as Administrator)
 
-![alt text](https://github.com/fbcjunior/code/blob/master/Images/awskey.jpg)
+![alt text](https://github.com/fbcjunior/devopscode/blob/master/Images/awskey.jpg)
 
 **You can follow the creation of the new stack in your AWS Cloud Formation - Ireland (West-eu-02) Region**
 
 After the installation the output of the script will print the endpoints that can be used with postman.
 
-![alt text](https://github.com/fbcjunior/code/blob/master/Images/scriptoputput.jpg)
+![alt text](https://github.com/fbcjunior/devopscode/blob/master/Images/scriptoputput.jpg)
 
 ## Usage
 ### Create POST
@@ -47,7 +47,7 @@ You can download postman here: https://www.getpostman.com/downloads/
 3) click on send button
 4) Output
 
-![alt text](https://github.com/fbcjunior/code/blob/master/Images/post.jpg)
+![alt text](https://github.com/fbcjunior/devopscode/blob/master/Images/post.jpg)
 
 ### Create GET
 
@@ -55,7 +55,7 @@ You can download postman here: https://www.getpostman.com/downloads/
 2) click on send button
 3) Output
 
-![alt text](https://github.com/fbcjunior/code/blob/master/Images/Get.jpg)
+![alt text](https://github.com/fbcjunior/devopscode/blob/master/Images/Get.jpg)
 
 
 ## Downtime Information
@@ -71,7 +71,7 @@ CodeDeploy is capable of automatically updating our functions' aliases weights a
 
 Basically, our Lambda function deployments will be on autopilot.
 
-![alt text](https://github.com/fbcjunior/code/blob/master/Images/trafficlambda.jpg)
+![alt text](https://github.com/fbcjunior/devopscode/blob/master/Images/trafficlambda.jpg)
 
 
 ### Configuration:
@@ -81,7 +81,7 @@ further information: https://docs.aws.amazon.com/serverless-application-model/la
 
 #### type: (required) defines how the traffic will be shifted between Lambda function versions. It must be one of the following:
 
-![alt text](https://github.com/fbcjunior/code/blob/master/Images/LambdaUpdate.jpg)
+![alt text](https://github.com/fbcjunior/devopscode/blob/master/Images/LambdaUpdate.jpg)
 
 
 ## How To remove the AWS stack
