@@ -1,0 +1,28 @@
+{
+  "name": "fender",
+  "version": "1.0.0",
+  "description": "AWS Serverless REST API with DynamoDB",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "serverless-dynamodb-local": "^0.2.38",
+    "source-map-support": "^0.5.10",
+    "superagent": "^5.1.0",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.17",
+    "@types/node": "^10.12.18",
+    "aws-sdk": "^2.499.0",
+    "serverless-offline": "^5.8.0",
+    "serverless-plugin-canary-deployments": "^0.4.7",
+    "serverless-webpack": "^5.2.0",
+    "ts-loader": "^5.3.3",
+    "typescript": "^3.2.4",
+    "webpack": "^4.29.0"
+  },
+  "author": "Franklin Correa https://github.com/fbcjunior/",
+  "license": "MIT"
+}
