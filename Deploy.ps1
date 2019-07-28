@@ -119,11 +119,10 @@ if ($install_node) {
     
 } else {
     write-host "Proceeding with the previously installed nodejs version ..."
+    `n
 }
 
-`n
-
-# Determine script location for PowerShell
+# Determine script location
 $ScriptDir = Split-Path $script:MyInvocation.MyCommand.Path
 
 cd $ScriptDir
@@ -162,8 +161,6 @@ if ($install_serverless) {
 }
 
 
-
-
 if ($install_DynamoDB) {
     
     #Serverless install
@@ -172,7 +169,7 @@ if ($install_DynamoDB) {
     write-host "---------------------`n"
 
     # Deploying to AWS
-    write-host "`[SLS] Installing Dynamodb..."
+    write-host "[SLS] Installing Dynamodb..."
     sls dynamodb install
 
 }
@@ -182,7 +179,7 @@ if ($deploy_lambda) {
     
     #Serverless install
     write-host "`n---------------"
-    write-host "Deployig Lambda "
+    write-host "Deploying Lambda "
     write-host "---------------`n"
 
     # Deploying to AWS
@@ -190,7 +187,3 @@ if ($deploy_lambda) {
     serverless deploy
 
 }
-
-
-
-    sls dynamodb install
