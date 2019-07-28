@@ -8,13 +8,13 @@ Name: 'Franklin Correa'
 
 -->
 
-# AWS Serverless REST API with DynamoDB
+# Build a Serverless Web Application
 
-This example demonstrates how to create an RestAPi, AWS lambda and DynamoDB.
+I'm using an API to expose a lambda function, this example demonstrates how to create an RestAPi, AWS lambda and DynamoDB. to control POST and GET requests by username.
+This example demonstrates how to create and run a REST API in AWS using lambda to manage the Post/Get stored in DynamoDB.
 
 HTTP POST requests supply additional data from the client (browser) to the server in the message body.
-
-GET requests include all required data in the URL.
+GET requests include all required data in the URL by username
 
 ## Dependencies
 
@@ -31,7 +31,7 @@ GET requests include all required data in the URL.
 
 ![alt text](https://github.com/fbcjunior/devopscode/blob/master/Images/awskey.jpg)
 
-**You can follow the creation of the new stack in your AWS Cloud Formation - Ireland (West-eu-02) Region**
+**You can follow the install progression of the new stack in your AWS Cloud Formation - Ireland (West-eu-02) Region**
 
 After the installation the output of the script will print the endpoints that can be used with postman.
 
@@ -76,7 +76,7 @@ Basically, our Lambda function deployments will be on autopilot.
 
 ### Configuration:
 
-#### the type of increment updating can be changed in the file serverless.yml, by default the script is configured to use the opction **AllAtOnce** 
+#### the type of shifiting ting can be changed in the file serverless.yml, by default the script is configured to use the opction **AllAtOnce** 
 further information: https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/automating-updates-to-serverless-apps.html
 
 #### type: (required) defines how the traffic will be shifted between Lambda function versions. It must be one of the following:
