@@ -46,10 +46,12 @@ $url = "https://nodejs.org/dist/v$version/node-v$version-x64.msi"
 $install_node = $TRUE
 $install_serverless = $TRUE
 $deploy_lambda = $TRUE
+$install_NPM = $TRUE
+$install_DynamoDB = $TRUE
 
 
 write-host "`n----------------------------"
-write-host "system requirements checking  "
+write-host "System Requirements Checking  "
 write-host "----------------------------`n"
 
 
@@ -78,7 +80,7 @@ if ($install_node) {
     # warning : if a node.msi file is already present in the current folder, this script will simply use it
         
     write-host "`n----------------------------"
-    write-host "  nodejs msi file retrieving  "
+    write-host " nodejs msi file retrieving  "
     write-host "----------------------------`n"
 
     $filename = "node.msi"
@@ -107,7 +109,7 @@ if ($install_node) {
 
     ### nodejs install
     write-host "`n----------------------------"
-    write-host " nodejs installation  "
+    write-host "Nodejs Installation  "
     write-host "----------------------------`n"
 
     write-host "[NODE] running $node_msi"
@@ -129,16 +131,46 @@ if ($install_serverless) {
 
     #Serverless install
     write-host "`n----------------------------------"
-    write-host " serverless framework installation "
+    write-host "Serverless Framework Installation "
     write-host "----------------------------------`n"
 
 
     #Serverless Installation
     write-host "`[SERVERLESS] installing Serverless Framework..."
     npm install -g serverless
+    #npm i
+    #sls dynamodb install
+
 
     write-host "`[SERVERLESS] Configuring Serverless AWS Access profile..."
     serverless config credentials --provider aws --key $AccesskeyID --secret $Secretaccesskey --overwrite  
+
+}
+
+
+if ($install_NPM) {
+    
+    #Serverless install
+    write-host "`n----------------"
+    write-host "NPM Installation "
+    write-host "----------------`n"
+
+    # Deploying to AWS
+    write-host "`[NPM] Installing..."
+    npm i
+
+}
+
+if ($install_DynamoDB) {
+    
+    #Serverless install
+    write-host "`n---------------------"
+    write-host "DynamoDB Installation "
+    write-host "---------------------`n"
+
+    # Deploying to AWS
+    write-host "`[SLS] Installing Dynamodb..."
+    sls dynamodb install
 
 }
 
@@ -147,11 +179,15 @@ if ($deploy_lambda) {
     
     #Serverless install
     write-host "`n---------------"
-    write-host " Deployig Lambda "
-    write-host "----------------`n"
+    write-host "Deployig Lambda "
+    write-host "---------------`n"
 
     # Deploying to AWS
     write-host "`[SERVERLESS] Deploying AWS Lambda..."
     serverless deploy
 
 }
+
+
+
+    sls dynamodb install
