@@ -76,10 +76,10 @@ Basically, our Lambda function deployments will be on autopilot.
 
 ### Configuration:
 
-#### the type of shifiting ting can be changed in the file serverless.yml, by default the script is configured to use the opction **AllAtOnce** 
+#### the type of shifting can be changed in the file serverless.yml, by default the script is configured to use the option **AllAtOnce** 
 further information: https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/automating-updates-to-serverless-apps.html
 
-#### type: (required) defines how the traffic will be shifted between Lambda function versions. It must be one of the following:
+#### type: (required) defines how the traffic will be shifted between Lambda function versions.
 
 ![alt text](https://github.com/fbcjunior/devopscode/blob/master/Images/LambdaUpdate.jpg)
 
